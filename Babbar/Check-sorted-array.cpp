@@ -5,7 +5,8 @@ using namespace std;
 bool isSorted(vector<int>&v,int ind)
 {
     if(ind == v.size()-1) return true;
-    return v[ind]<=v[ind+1] & isSorted(v,ind+1);
+    else if(v[ind]<=v[ind+1]) return isSorted(v,ind+1);
+    else return false;
 }
 
 int main()
